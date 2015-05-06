@@ -1,7 +1,15 @@
-$(document).pjax('a:not(.no-pjax)', 'main');
-$(document).on('ready pjax:complete', function() {
-    $(document).activeNavigation("#nav-mobile");
-});
+// $(document).pjax('a:not(.no-pjax)', 'main');
+
+(function( $ ) {
+    function f() {
+        $(document).activeNavigation("#nav-mobile");
+    }
+    
+    $(document).on('ready page:load pjax:complete', f);
+})(jQuery);
+
+
+
 
 $('.collapsible').collapsible({
     accordion : false

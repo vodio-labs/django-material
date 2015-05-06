@@ -28,7 +28,8 @@ INSTALLED_APPS = (
     # material apps
     'material',
     'material.frontend',
-    'easy_pjax',
+    # 'easy_pjax',
+    'turbolinks',
     'material.admin',
     # standard django apps
     'django.contrib.admin',
@@ -62,6 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'turbolinks.middleware.TurbolinksMiddleware',
 )
 
 SITE_ID = 1
