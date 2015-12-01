@@ -9,7 +9,7 @@
                 {% endpart %}"{% endtagattrs %}>
         <div class="btn">
             {% part field prefix %}<span>{% trans 'File' %}</span>{% endpart %}
-            <input type="file" name="{{ bound_field.html_name }}"/>
+            {{ bound_field }}
         </div>{% part field control %}
         <input {% tagattrs %}
                type="text"
